@@ -5,7 +5,7 @@ Chris Samuel
 ksamuel.chris@gmail.com
 August 1, 2015 3pm EST
 
-github username: alayode
+github username: crisam
 linkedIN: 
 facebook:
 Twitter:
