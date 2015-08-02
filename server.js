@@ -34,9 +34,13 @@ app.get('/',function(req,res){
   res.sendfile('index.html')
 });
 
-app.get('/assets',function(req,res){
+app.get('/style',function(req,res){
     //  res.sendfile('This is a test asset endpoint')
-    res.sendfile('')
+    res.sendfile('style.css')
+});
+app.get('/js',function(req,res){
+    //  res.sendfile('This is a test asset endpoint')
+    res.sendfile('shichiyouhyou.js')
 });
 
 app.listen(3000, function () {

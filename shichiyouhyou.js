@@ -1,22 +1,26 @@
 'use strict';
+(function (window, document) {
 
-//console.log(new Date())
-var dayOne = new Date(this.year,this.month,1);
-var hajimete = dayOne.getMonth();
-//find number of days in month
-var monthLength = shichiyou[this.month];
-// these are labels for the days of the week
-var	shichiyou = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
-//['月','火','水','木','金','土'];
-// shichiyou == days of the week
-//console.log(shichiyou);
-// I have added the human-readable month name labels in order
-var toshi_tsuki = ['January', 'February', 'March', 'April',
-                     'May', 'June', 'July', 'August', 'September',
-                     'October', 'November', 'December'];
-//['1月','２月','３月','４月','５月','６月','７月','８月','９月','１０月','１１月','１２月'];
-//these are the days of the week for each month, in order
-var tsuki_no_hi = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+  var months = ['January', 'February', 'March', '４月', 'May', 'June', 'July', '８月', 'September', 'October', 'November', 'December'];
+  var daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+  var daysInMonth = [31,28,31,30,31,30,31,31,30,31,30,31];
+
+  function onCalFrameClick(e) {
+    var target = e.target || e.srcElement;
+
+    //Prevent clicks that on the table element and td elements that are blank
+    if (target === this.table || target.textContent === '') return;
+
+    var curr = this.getCurrentDate();
+    var date = parseInt(target.textContent, 10);
+
+    if (this.selectedNode) this.selectedNode.classList.remove('selected');
+    this.selectedNode = target;
+    this.selectedNode.classList.add('selected');
+
+    this.setCurrentDate(new Date(curr.getFullYear(), curr.getMonth(), date));
+    this.setViewDate(this.getCurrentDate());
+  }
 
 function onCalFrameClick(e) {
     var target = e.target || e.srcElement;

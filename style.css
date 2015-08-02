@@ -17,7 +17,8 @@ html, body {
 
 .calendar {
   font-size: 20px;
-  width: 700px;
+  width: 695px;
+  height:300px;
   border: 5px solid #222;
   border-radius: 5px;
   background-color: #222;
@@ -28,7 +29,10 @@ html, body {
   .calendar__left-pane {
     width: 40%;
     text-align: center;
-    background-color: #eee; }
+    background-color: #eee;
+    height:100%;
+  }
+
     .calendar__left-pane #weekday {
       padding: 12px;
       color: #fff;
@@ -42,10 +46,10 @@ html, body {
       padding: 10px; }
   .calendar__right-pane {
     width: 57%;
-    margin-left: 11px;
+    margin-left: 8px;
     padding: 5px;
     background-color: #fff;
-    height: 235px; }
+    height:100%; }
     .calendar__right-pane .header {
       padding: 20px 20px 8px;
       text-align: center; }
@@ -55,9 +59,10 @@ html, body {
       .calendar__right-pane .cal-wrapper .days-of-week {
         padding: 5px 0px;
         color: #f3483c; }
-      .calendar__right-pane .cal-wrapper .days-of-week div {
+      .calendar__right-pane .cal-wrapper .days-of-week li {
         width: 14.28571%;
         float: left;
+        list-style: none;
         text-align: center; }
 
 #prev:hover, #next:hover {
@@ -90,4 +95,3 @@ html, body {
     #cal-frame tr td.selected {
       background-color: #f3483c;
       color: #fff; }
-

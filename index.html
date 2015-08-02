@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Calendar Widget</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-</head>
+  <title>Hackerati Calendar Japanese</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/style">
+  </head>
 <body>
 
   <div class="calendar clearfix" id="cal">
@@ -17,21 +17,22 @@
 
     <div class="calendar__right-pane">
       <div class="header clearfix">
-        <span class="ion-ios-arrow-left" id="prev"></span>
+        <span class="glyphicon glyphicon-chevron-left" id="prev"></span>
         <span id="month-year"></span>
-        <span class="ion-ios-arrow-right" id="next"></span>
+        <span class="glyphicon glyphicon-chevron-right" id="next"></span>
       </div>
 
       <div class="cal-wrapper" id="">
-        <div class="days-of-week clearfix">
-          <div>S</div>
-          <div>M</div>
-          <div>T</div>
-          <div>W</div>
-          <div>T</div>
-          <div>F</div>
-          <div>S</div>
-        </div>
+        <ul class="days-of-week clearfix">
+          <li>日</li>
+          <li>月</li>
+          <li>火</li>
+          <li>水</li>
+          <li>木</li>
+          <li>金</li>
+          <li>土</li>
+        </ul>
+
 
 
         <table class="" id="cal-frame">
@@ -43,7 +44,8 @@
   </div>
 
 
-  <script src="main.js"></script>
+  <script src="/js"></script>
+    <link rel="stylesheet" href="/style">
 
 </body>
 </html>
